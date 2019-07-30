@@ -1,17 +1,39 @@
 <div *ngIf="movie" class="modal-container">
-    <div class="col-10">
-        <div class="movie-card d-flex">
-            <div class="movie-poster">
-                <img src="{{movie.Poster}}" class="img-fluid" />
-            </div>
-            <div class="movie-description" style="width:100%;">
-                <div>
-                    <h3>{{movie.Title}}</h3>
+    <div class="col-11">
+        <!-- XS, SM -->
+        <div class="d-block d-sm-block d-md-none d-lg-none">
+            <div class="movie-card-xs">
+                <div class="movie-poster-xs">
+                    <img src="{{movie.Poster}}" class="img-fluid" />
                 </div>
-                <div><b>Year:</b> {{movie.Year}}</div>
-                <div style="margin-bottom:10px;"><b>Type:</b> {{movie.Type}}</div>
-                <div>
-                    <button class="btn btn-danger" (click)="closeMovie()">Close</button>
+                <div class="movie-description-xs" style="width:100%;">
+                    <div>
+                        <h5>{{movie.Title}}</h5>
+                    </div>
+                    <div><b>Year:</b> {{movie.Year}}</div>
+                    <div style="margin-bottom:10px;"><b>Type:</b> {{movie.Type}}</div>
+                    <div>
+                        <button class="btn btn-danger" (click)="closeMovie()">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MD, LG -->
+        <div class="d-none d-sm-none d-md-block d-lg-block">
+            <div class="movie-card-md d-flex">
+                <div class="movie-poster-md">
+                    <img src="{{movie.Poster}}" class="img-fluid" />
+                </div>
+                <div class="movie-description-md" style="width:100%;">
+                    <div>
+                        <h3>{{movie.Title}}</h3>
+                    </div>
+                    <div><b>Year:</b> {{movie.Year}}</div>
+                    <div style="margin-bottom:10px;"><b>Type:</b> {{movie.Type}}</div>
+                    <div>
+                        <button class="btn btn-danger" (click)="closeMovie()">Close</button>
+                    </div>
                 </div>
             </div>
         </div>

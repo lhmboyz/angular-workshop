@@ -84,7 +84,7 @@ export class MovieComponent implements OnInit, AfterViewInit {
     ) { }
 
     ngOnInit() {
-        this.filter.s = '';
+        this.filter.s = 'batman';
         this.filter.type = 'movie';
         this.filter.page = 1;
     }
