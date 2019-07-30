@@ -1,0 +1,54 @@
+<div class="container" style="margin-top:40px;" infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="150" (scrolled)="onScroll()">
+    <div class="row">
+        <div class="col-12" style="margin-bottom:20px;">
+            <span class="title-card">CINEMA XXI</span>
+        </div>
+        <div class="col-12" style="margin-bottom:20px;">
+            <span *ngFor="let type of types" class="type-card type-card-active" [ngClass]="{'type-card-active':type.toLowerCase() == filter.type}" (click)="changeFilter('type',type.toLowerCase())">
+                {{type}}
+            </span>
+        </div>
+        <div class="col-12" style="margin-bottom:40px;">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Search</span>
+                </div>
+                <input [(ngModel)]="filter.s" name="s" id="s" #s="ngModel" type="text" class="form-control">
+            </div>
+        </div>
+        <div *ngFor="let movie of movies, let i = index" class="col-6 col-sm-4 col-md-3 col-lg-2">
+            <div class="movie-card" (click)="showMovie(movie)">
+                <div class="movie-poster">
+                    <img src="{{movie.Poster}}" class="img-fluid" />
+                </div>
+                <div class="movie-title">
+                    {{movie.Title}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<movie-detail *ngIf="selectedMovie" [movie]="selectedMovie" (onClose)="closeMovie($event)"></movie-detail>
+
+<!--
+<div *ngIf="selectedMovie" class="modal-container">
+    <div class="col-10">
+        <div class="movie-card d-flex">
+            <div>
+                <img src="{{selectedMovie.Poster}}" class="img-fluid" />
+            </div>
+            <div class="movie-title" style="width:100%;">
+                <div>
+                    <h3>{{selectedMovie.Title}}</h3>
+                </div>
+                <div><b>Year:</b> {{selectedMovie.Year}}</div>
+                <div style="margin-bottom:10px;"><b>Type:</b> {{selectedMovie.Type}}</div>
+                <div>
+                    <button class="btn btn-danger" (click)="closeMovie()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+-->

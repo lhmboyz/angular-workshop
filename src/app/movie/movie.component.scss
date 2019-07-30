@@ -1,0 +1,43 @@
+@import '../../styles.scss';
+
+.movie-card {
+    margin: 0 0 20px 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 1px #ddd;
+    cursor: pointer;
+}
+
+.movie-poster img {
+    border-radius: 5px 5px 0 0;
+}
+
+.movie-title {
+    padding: 10px;
+    background: white;
+    border-radius: 0 0 5px 5px;
+}
+
+.title-card {
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    background: #eee;
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    border-left: 5px solid black;
+    border-radius: 5px;
+}
+
+.type-card {
+    font-size: 20px;
+    background: #eee;
+    margin-right: 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.type-card-active {
+    font-weight: bold;
+    border-bottom: 3px solid #60AFF0;
+}

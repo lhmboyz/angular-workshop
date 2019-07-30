@@ -1,0 +1,22 @@
+@import '../../styles.scss';
+
+.navbar {
+    background: black;
+    box-shadow: 2px 2px 2px 2px #dcdcdc;
+}
+
+.nav-item {
+    background: #333;
+    margin: 0 5px 0 5px;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+
+.nav-item:hover {
+    background: #555;
+}
+
+.nav-link {
+    font-size: 15px;
+    font-weight: bold;
+}

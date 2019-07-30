@@ -1,0 +1,19 @@
+<div *ngIf="movie" class="modal-container">
+    <div class="col-10">
+        <div class="movie-card d-flex">
+            <div class="movie-poster">
+                <img src="{{movie.Poster}}" class="img-fluid" />
+            </div>
+            <div class="movie-description" style="width:100%;">
+                <div>
+                    <h3>{{movie.Title}}</h3>
+                </div>
+                <div><b>Year:</b> {{movie.Year}}</div>
+                <div style="margin-bottom:10px;"><b>Type:</b> {{movie.Type}}</div>
+                <div>
+                    <button class="btn btn-danger" (click)="closeMovie()">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
