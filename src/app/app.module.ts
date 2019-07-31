@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MovieComponent } from './movie/movie.component';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
+import { AboutComponent } from './about/about.component';
 
 import { MovieService } from './services/movie.service';
 
@@ -19,6 +20,7 @@ import { MovieService } from './services/movie.service';
         NavbarComponent,
         MovieComponent,
         MovieDetailComponent,
+        AboutComponent
     ],
     imports: [
         BrowserModule,
